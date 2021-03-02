@@ -1,25 +1,21 @@
 " Vim color file
-" Maintainer:   Hans Fugal <hans@fugal.net>
-" Last Change:  $Date: 2004/06/13 19:30:30 $
-" Last Change:  $Date: 2004/06/13 19:30:30 $
-" URL:      http://hans.fugal.net/vim/colors/desert.vim
-" Version:  $Id: desert.vim,v 1.1 2004/06/13 19:30:30 vimboss Exp $
+" Maintainer:   Tuomas Yrjölä <tuomas.yrjola@yrhki.com>
+" URL:      https://github.com/yrhki/vim-blackout
 
 " cool help screens
 " :he group-name
 " :he highlight-groups
 " :he cterm-colors
 
-set background=dark
 if version > 580
-    " no guarantees for version 5.8 and below, but this makes it stop
-    " complaining
     hi clear
     if exists("syntax_on")
     syntax reset
     endif
 endif
+
 let g:colors_name="blackout"
+set background=dark
 
 hi Normal       guifg=White guibg=grey20
 
@@ -111,19 +107,18 @@ hi TabLineSel   ctermfg=255 ctermbg=234
 hi TabLineFill  cterm=none  ctermbg=235
 hi Todo         ctermfg=232 ctermbg=184
 
-" Term - Pmenu {{{ "
+" Pmenu {{{ "
 hi Pmenu        ctermbg=232 ctermfg=245
 hi PmenuSel     ctermbg=233 ctermfg=255
-" }}} Term - Pmenu "
+" }}} Pmenu "
+
+" Plugins {{{ "
 
 " Syntastic
 hi SyntasticWarningSign ctermbg=235 ctermfg=184
 hi SyntasticErrorSign   ctermbg=235 ctermfg=196
 
-
-" TODO {{{ "
-"hi EndOfBuffer
-" }}} TODO "
+" }}} Plugins "
 
 
 "vim: sw=4
